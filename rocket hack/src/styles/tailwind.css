@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Colors */
+  --color-primary: #4F46E5; /* Primary (indigo-600) */
+  --color-primary-hover: #4338CA; /* Primary hover (indigo-700) */
+  --color-primary-light: #E0E7FF; /* Primary light (indigo-100) */
+  --color-primary-50: #EBEAFD; /* Primary 50 */
+  --color-primary-100: #D7D5FB; /* Primary 100 */
+  --color-primary-200: #AFAAF7; /* Primary 200 */
+  --color-primary-300: #867FF3; /* Primary 300 */
+  --color-primary-400: #5E55EF; /* Primary 400 */
+  --color-primary-500: #4F46E5; /* Primary 500 */
+  --color-primary-600: #2A1FD4; /* Primary 600 */
+  --color-primary-700: #2018A7; /* Primary 700 */
+  --color-primary-800: #17127A; /* Primary 800 */
+  --color-primary-900: #0E0B4D; /* Primary 900 */
+
+  /* Neutral Colors */
+  --color-background: #FFFFFF; /* Background (white) */
+  --color-surface: #F9FAFB; /* Surface (gray-50) */
+  --color-border: #E5E7EB; /* Border (gray-200) */
+  --color-text-primary: #111827; /* Text primary (gray-900) */
+  --color-text-secondary: #4B5563; /* Text secondary (gray-600) */
+  --color-text-tertiary: #9CA3AF; /* Text tertiary (gray-400) */
+
+  /* Semantic Colors */
+  --color-success: #10B981; /* Success (emerald-500) */
+  --color-warning: #F59E0B; /* Warning (amber-500) */
+  --color-error: #F43F5E; /* Error (rose-500) */
+  --color-info: #3B82F6; /* Info (blue-500) */
+  --color-hackathon-tag-bg: #EDE9FE; /* Hackathon tag background (violet-100) */
+  --color-hackathon-tag-text: #5B21B6; /* Hackathon tag text (violet-800) */
+  --color-team-tag-bg: #CCFBF1; /* Team tag background (teal-100) */
+  --color-team-tag-text: #0F766E; /* Team tag text (teal-800) */
+}
+
+@layer base {
+  body {
+    font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    color: var(--color-text-primary);
+    background-color: var(--color-background);
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-hover focus:ring-2 focus:ring-primary focus:ring-offset-2 transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-surface text-text-primary border border-border hover:bg-gray-100 focus:ring-2 focus:ring-primary focus:ring-offset-2 transition-colors;
+  }
+  
+  .card-base {
+    @apply bg-background border border-border rounded-lg shadow-sm;
+  }
+  
+  .input-base {
+    @apply border border-border rounded-md px-3 py-2 focus:ring-2 focus:ring-primary focus:border-primary transition-colors;
+  }
+}
